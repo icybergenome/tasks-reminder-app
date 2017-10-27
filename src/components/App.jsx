@@ -69,7 +69,7 @@ class App extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ addReminder, deleteReminder }, dispatch);
+  return bindActionCreators({ addReminder, deleteReminder }, dispatch); //Binding action creators with dispatch function in overall Application
 }
 
 function mapStateToProps(state) {
@@ -78,7 +78,7 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(App); //Since mapStateToProps is haven't defined in app
+export default connect(mapStateToProps,mapDispatchToProps)(App);
 
 /* Shortcut
-export default connect(null, {addReminder})(App);*/
+export default connect(null, {addReminder})(App);*/ //Since mapStateToProps is haven't defined in app

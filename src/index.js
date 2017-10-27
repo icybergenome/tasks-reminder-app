@@ -9,7 +9,7 @@ import './index.css';
 const store = createStore(reducer);
 
 ReactDOM.render(
-  <Provider store={store}>
+  <Provider store={store}>      //It will pass down the store to entire Application via Reducers which is a middle layer
     <App />
   </Provider>,
   document.getElementById('root')

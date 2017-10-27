@@ -17,7 +17,7 @@ const reminders = (state = [], action) => {
   let reminders = null;
   switch (action.type) {
     case ADD_REMINDER:
-      reminders = [...state, reminder(action)]; //First element of array is current state and second is new reminder with action
+      reminders = [...state, reminder(action)]; //First element of array is current state and second is new reminder with action &&&&& Calling the reminder function defined in this file
       console.log('reminders as state', reminders);
       return reminders;
     case DELETE_REMINDER:
