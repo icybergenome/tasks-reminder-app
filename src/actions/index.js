@@ -1,9 +1,10 @@
-import { ADD_REMINDER, DELETE_REMINDER } from '../constants';
+import { ADD_REMINDER, DELETE_REMINDER, CLEAR_REMINDERS, UPDATE_REMINDERS } from '../constants';
 
-export const addReminder = (text) => {    //Action Creator function
+export const addReminder = (text, dueDate) => {    //Action Creator function
   const action = {
     type: ADD_REMINDER,
-    text                //key value pair is same so it will return arg text with key text
+    text,                //key value pair is same so it will return arg text with key text
+    dueDate
   }
 
   console.log('action is addReminder', action);
@@ -17,4 +18,16 @@ export const deleteReminder = (id) => {
   }
   console.log('Deleting in actions', action);
   return action;
+}
+
+export const clearReminders = () => {
+  return {
+    type: CLEAR_REMINDERS
+  }
+}
+
+export const updateReminders = () => {
+  return {
+    type: UPDATE_REMINDERS
+  }
 }
